@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+
+  :root {
+    --Cyan:hsl(179, 62%, 43%);
+    --Cyan-Light:hsl(179, 70%, 45%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+    --White: #FFFFFF;
+    --Off-White: #ABEFF1;
+  }
+
+  body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-image: url(images/Background@3x.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1500px;
+  background-color:#F0F0F0;
+}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "head head" "item1 item2";
+    max-width: 700px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 35px #C5C5C5;
+
+  }
+
+  .heading {
+    grid-area: head;
+    padding: 35px;
+    background-color: var(--White);
+    border-radius: 10px 10px 0px 0px;
+  }
+  .heading h1{
+    font-size:28px;
+    color:var(--Cyan);
+  }
+
+  .heading h2{
+    font-size: 20px;
+    color:var(--Bright-Yellow);
+  }
+
+  .heading p{
+    font-size: 16px;
+    color:var(--Grayish-Blue);
+    line-height: 24px;
+    width:90%;
+  }
+
+  .item1 {
+    grid-area: item1;
+    background-color: var(--Cyan);
+    padding: 35px;
+    border-bottom-left-radius: 10px;
+    color:var(--White);
+  }
+
+  .item1 h1{
+    font-size: 20px;
+
+  }
+
+  .item1 p{
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .item1 p span.price {
+  font-size: 32px;
+  font-weight: 700;
+  }
+
+  .item1 p span.permonth {
+    font-size: 16px;
+    padding-left: 15px;
+    color: var(--Off-White);
+  }
+
+  .item1 button{
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--Bright-Yellow);
+    margin-top: 15px;
+    padding: 3px;
+    width: 100%;
+    font-weight:400;
+    letter-spacing: 1px;
+    transition:0.1s ease;
+    box-shadow: 0px 10px 25px #1A8B8D;
+  }
+
+  .item1 button:hover{
+    cursor: pointer;
+
+  }
+  .item1 button:active{
+    top: 2px;
+    background-color: #9DD130;
+  }
+
+
+  .item2 {
+    color: var(--White);
+    grid-area: item2;
+    background-color: var(--Cyan-Light);
+    padding: 35px;
+    border-bottom-right-radius: 10px;
+
+  }
+
+  .item2 h1{
+    font-size: 20px;
+  }
+
+  .item2 ul{
+    padding:0px;
+
+  }
+
+  .item2 ul li{
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--Off-White);
+    list-style-type: none;
+
+  }
+
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media screen and (min-width: 500px) and (max-width: 750px) {
+
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-areas: "head" "item1" "item2";
+    margin: 20px 10% 0px;
+    box-shadow: 0px 0px 45px #C5C5C5;
+    border-radius: 10px;
+
+  }
+
+  .heading p{
+    font-size: 16px;
+    line-height: 32px;
+    width:100%;
+
+  }
+
+  .item1{
+    border-radius: 0px;
+  }
+
+  .item2{
+    border-radius: 0px 0px 10px 10px;
+  }
+
+
+}
+
+  </style>
+
+
+</head>
+
+
+<body>
+
+
+
+
+<div class="grid-container">
+
+  <div class="heading">
+    <h1>Join our community</h1>
+    <h2>30-day, hassle-free money back guarantee</h2>
+    <p>Gain access to our full library of tutorials along with expert code reviews.
+    Perfect for any developers who are serious about honing their skills.</p>
+  </div>
+
+  <div class="item1">
+    <h1>Monthly Subscription</h1>
+
+    <p><span class="price">&dollar;29</span><sup><span class="permonth">per month</span></sup></p>
+
+
+    <p>Full access for less than &dollar;1 a day</p>
+
+    <button><p>Sign Up</p></button>
+  </div>
+
+  <div class="item2">
+
+    <h1>Why Us</h1>
+    <ul>
+    <li>Tutorials by industry experts</li>
+    <li>Peer &amp; expert code review</li>
+    <li>Coding exercises</li>
+    <li>Access to our GitHub repos</li>
+    <li>Community forum</li>
+    <li>Flashcard decks</li>
+    <li>New videos every week</li>
+    </ul> 
+  </div>
+
+
+</div>
+  
+
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
