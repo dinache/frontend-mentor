@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --Violet:hsl(257, 40%, 49%);
+      --Pink: #F151CA;
+    }
+
+  body{
+    background-color: var(--Violet);
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .content{
+    display:grid;
+    margin: auto;
+    max-width: 90%;
+    grid-column-gap: 35px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "left right";
+  }
+
+  .left{
+    grid-area:left ;
+  }
+
+  .left img{
+    max-width: 100%;
+  }
+
+  .right{
+    grid-area:right;
+    max-width: 80%;
+  }
+
+
+  h1{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 44px;
+    color: white;
+    max-width: 90%;
+
+  }
+
+  p{
+    font-family: Open Sans;
+    font-size: 18px;
+    color: white;
+    max-width: 90%;
+  }
+
+  body button{
+    position: relative;
+    background-color: white;
+    border:none;
+    font-size:18px;
+    color:var(--Violet);
+    padding: 15px 60px 15px 60px;
+    letter-spacing: 1px;
+    border-radius: 80px;
+    box-shadow: 0px 5px 10px #402489;
+  }
+
+  button:hover{
+    cursor:pointer;
+  }
+
+  button:active{
+    top: 2px;
+
+  }
+
+  .social{
+  margin-top: 80px;
+  text-align: right;
+}
+
+.social img{
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.social button{
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  margin-left: 15px;
+  background-color: transparent;
+  box-shadow:none;
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+
+}
+.social button:active{
+  top:0px;
+}
+  
+.attribution { 
+  position: relative;
+  font-size: 11px; 
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.attribution a { color: var(--Pink); }
+
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+
+
+  body{ background-image: url(images/bg-mobile.svg);  }
+
+  .header{
+    padding-top: 25px;
+    padding-bottom:50px;
+  }
+
+  .content{
+  display:grid;
+  margin: auto;
+  max-width: 80%
+  grid-column-gap: 35px;
+  grid-template-columns: 10px auto 10px ;
+  grid-template-areas: ". left ." ". right .";
+  text-align: center;
+}
+
+
+.left{
+  grid-area:left ;
+}
+
+.left img{
+  max-width: 100%;
+  margin:auto;
+  padding-bottom: 50px;
+}
+
+.right{
+  grid-area:right;
+  max-width: 1000%;
+}
+
+
+h1{ max-width: 100%; font-size: 38px; }
+p{ max-width: 100%; font-size: 22px; }
+
+.social{
+  text-align:center;
+}
+
+}
+
+
+  </style>
+
+</head>
+<body>
+  <div class="header"><img src="images/logo.svg" alt="logo.svg"></div>
+  <div class="content">
+  <div class="left"><img src="images/illustration-mockups.svg "></div>
+  <div class="right">
+
+  <h1> Build The Community Your Fans Will Love</h1>
+
+  <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+  Create connections with your users as you engage in genuine discussion. </p>
+
+  <button>Register</button>
+
+  <span><div class="social">
+    <button><img src="images/logos/fb.png" alt="Facebook"></button>
+    <button><img src="images/logos/twt.png" alt="Twitter"></button>
+    <button><img src="images/logos/ig.png" alt="Instagram"></button>
+  </div></span>
+
+  </div>
+  </div>
+</div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/dinache">Dina Chen</a>.
+    </p>
+  </footer>
+</body>
+</html>
